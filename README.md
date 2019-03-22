@@ -1,5 +1,8 @@
 ## ESLINT, MEMO AND HOOK IN  REACT16.8
 
+
+# Init with create app
+
 In the project directory, you can run:
 
 ### `npm start`
@@ -64,3 +67,22 @@ This section has moved here: https://facebook.github.io/create-react-app/docs/de
 ### `npm run build` fails to minify
 
 This section has moved here: https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify
+
+# Memo trong reactjs
+- React memo được ra đời ở phiên bản 16.6 giúp cho việc có thể skip việc render khi props được truyền vào là giống nhau.
+- Memo là một higher order component. Nó tương tự như React.PureComponent nhưng dành cho function components thay vì là class.
+
+```
+const MemoComponent = React.memo(function MyComponent(props) {
+  /* Chỉ render khi props thay đổi, giống như mình sử dụng shouldComponentUpdate trong class */
+});
+
+```
+# Hook trong REACT JS
+ - Hooks là những hàm cho phép bạn “kết nối” React state và lifecycle vào các components sử dụng hàm. Với Hooks bạn có thể sử dụng state và lifecycles mà không cần dùng ES6 class. Hook được ra đời ở phiên bản 16.8
+
+- Điểm đặc biệt của Hook đó là chúng ta có thể sử dụng:
+ + useState: Để quản lý state của component
+ + useEffect: Hook này có tác dụng tương tự như componentDidMount, componentDidUpdate, và componentWillUnmount, nhưng được gom lại thành một hàm duy nhất.
+
+Note: Trong cùng một component, bạn có thể sử dụng bao nhiêu useState và useEffect tùy ý. Nhưng bắt buộc các hooks này phải được đặt ở phía bắt đầu hàm, và không nằm trong if, switch, vòng lặp for, while, hay trong các hàm lồng nhau
